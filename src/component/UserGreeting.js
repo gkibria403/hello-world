@@ -6,19 +6,26 @@ class UserGreeting extends Component {
         super(props)
     
         this.state = {
-             isLoggedIn: true
+             isLoggedIn: false
         }
     }
     
 
     render() {
-        let message 
-        if (this.state.isLoggedIn) {
-            message=<div><h1>Welcome Golam Kibria</h1></div>
-        }
-        else {
-            message=<div><h1>Welcome Guest</h1></div>
-        } 
+        // return(
+        //     this.state.isLoggedIn ? 
+        //     <div>Welcome Golam Kibria</div>:<div>Welcome Guest</div>
+        // )
+
+        return (this.state.isLoggedIn) && <div>Welcome Golam Kibria</div>
+         
+        // let message 
+        // if (this.state.isLoggedIn) {
+        //     message=<div><h1>Welcome Golam Kibria</h1></div>
+        // }
+        // else {
+        //     message=<div><h1>Welcome Guest</h1></div>
+        // } 
         
         // if (this.state.isLoggedIn) {
         //     return <div><h1>Welcome Golam Kibria</h1></div>
@@ -33,7 +40,7 @@ class UserGreeting extends Component {
         //         <div><h1>Welcome Guest</h1></div>                
         //     </div>
         // )
-        return <div>{message}</div>
+        //return <div>{message}</div>
     }
 }
 export default UserGreeting
